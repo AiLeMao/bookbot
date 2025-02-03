@@ -1,27 +1,19 @@
-
-
 def main():
-    # Define the path to the file
-    path_to_file = "books/frankenstein.txt"
+    book_path = "books/frankenstein.txt"
+    text = get_text(book_path)
+    word_count = get_word_count(text)
+    print(f"{word_count} words found in this file!")
 
-    # Open the file and read its contents
-    with open(path_to_file) as f:
-        file_contents = f.read()
+def get_word_count(text):
+    words = text.split()
+    return len(words)
 
-    # Print the contents to the console
-    print(file_contents)
+
+def get_text(path):
+    with open(path) as f:
+        return f.read()
     
-    # hoping this makes it accessable for the next function
-    count_words(file_contents)
-
-
-#count words here or something bro
-def count_words(file_contents):
-    words = file_contents.split()
-    words_count = len(words)
-    print(words_count)
 
 
 # Call the main function to execute the program
-if __name__ == "__main__":
-    main()
+main()
