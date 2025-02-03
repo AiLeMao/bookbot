@@ -1,3 +1,5 @@
+
+
 def main():
     # Define the path to the file
     path_to_file = "books/frankenstein.txt"
@@ -8,6 +10,17 @@ def main():
 
     # Print the contents to the console
     print(file_contents)
+    
+    # hoping this makes it accessable for the next function
+    count_words(file_contents)
+
+
+#count words here or something bro
+def count_words(file_contents):
+    words = file_contents.split()
+    words_count = len(words)
+    print(words_count)
+
 
 # Call the main function to execute the program
 if __name__ == "__main__":
