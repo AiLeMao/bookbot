@@ -2,7 +2,7 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_text(book_path)
     word_count = get_word_count(text)
-    
+    count_letters(text)
 
 #take the text. convert to lowercase. count and pray it drops it out correctly due to being a library
 def count_letters(text):
@@ -14,6 +14,8 @@ def count_letters(text):
             letter_count[letter] += 1
         else :
             letter_count[letter] = 1
+
+    print(letter_count)
 
 
 #takes "text" and splits it by strings aka words. length now gives the amount of strings aka words.
